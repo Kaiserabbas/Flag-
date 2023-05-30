@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: black;
+    }
+
+
+    #container {
+        border: 2px solid black;
+        background-color: rgb(141, 175, 209);
+        width: 800px;
+        height: fit-content;
+        display: flex;
+
+    }
+
+    #white {
+        width: 200px;
+        height: 400px;
+        color: rgb(141, 175, 209);;
+
+    }
+
+    #green {
+        width: 600px;
+        height: 400px;
+        color: rgb(141, 175, 209);;
+    }
+
+    img {
+        visibility: hidden;
+        position: relative;
+        padding-top: 35px;
+        padding-left: 150px;
+
+    }
+
+    button {
+        height: 50px;
+        width: 100px;
+        background-color: beige;
+        border-radius: 15%;
+    }
+
+    button:active {
+        transform: scale(0.85);
+    }
+
+    #simple {
+        background-color: black;
+        border: none;
+        color: aliceblue;
+
+    }
+    #button1, #button4 {
+        background-color: White;
+    }
+    #button2, #button5 {
+        background-color: green;
+    }
+    #button3, #button6 {
+        background-color: White;
+    }
+    #reset {
+        background-color: yellowgreen;
+        border-radius: 35%;
+        width: 200px;
+        margin-left: 165px;
+    }
+
+</style>
+
+<body>
+    <button id="simple">Small Part:> </button>
+    <button id="button1" , onclick="white()">White</button>
+    <button id="button2" , onclick="green()">Green</button>
+    <button id="button3" , onclick="hilal()">Hilal</button>
+    <hr>
+    <button id="simple">Big Part:> </button>
+    <button id="button4" , onclick="white1()">White</button>
+    <button id="button5" , onclick="green1()">Green</button>
+    <button id="button6" , onclick="hilal1()">Hilal</button>
+    <hr>
+    <button id="reset" , onclick="reset()">RESET</button>
+    <div id="container">
+        <div id="white"> White </div>
+        <div id="green"> Green
+            <img class="img" id="img" src="/star and cresent.png" height="300px">
+        </div>
+    </div>
+    <script>
+        function white() {
+            document.getElementById("white").style.backgroundColor = "white";
+            document.getElementById("white").style.color = "white";
+        }
+        function green() {
+            document.getElementById("white").style.backgroundColor = "green";
+            document.getElementById("white").style.color = "green";
+        }
+        function hilal() {
+            document.getElementById("img").style.filter = "invert(100%)";
+            document.getElementById("img").style.visibility= "visible";
+        }
+        
+
+
+        function white1() {
+            document.getElementById("green").style.backgroundColor = "white";
+            document.getElementById("green").style.color = "white";
+        }
+        function green1() {
+            document.getElementById("green").style.backgroundColor = "green";
+            document.getElementById("green").style.color = "green";
+        }
+        function hilal1() {
+            document.getElementById("img").style.filter = "brightness(5%)";
+            document.getElementById("img").style.visibility= "visible";
+
+        }
+        function reset() {
+            location.reload();
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
